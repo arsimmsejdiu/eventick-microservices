@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { app } from '../../app';
 
-it('returns a 201 on successful signup', async () => {
+it('returns a 201 on successful signup', () => {
   return request(app)
     .post('/api/users/signup')
     .send({
@@ -11,7 +11,7 @@ it('returns a 201 on successful signup', async () => {
     .expect(201);
 });
 
-it('returns a 400 with an invalid email', async () => {
+it('returns a 400 with an invalid email', () => {
   return request(app)
     .post('/api/users/signup')
     .send({
@@ -21,7 +21,7 @@ it('returns a 400 with an invalid email', async () => {
     .expect(400);
 });
 
-it('returns a 400 with an invalid password', async () => {
+it('returns a 400 with an invalid password', () => {
   return request(app)
     .post('/api/users/signup')
     .send({
