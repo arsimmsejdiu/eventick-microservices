@@ -1,20 +1,25 @@
 {
-  "name": "client",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "eventick-frontend",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "bootstrap": "^5.0.1",
-    "next": "^10.2.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-stripe-checkout": "^2.6.3"
+    "@types/node": "20.1.2",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "10.4.14",
+    "daisyui": "^2.51.6",
+    "next": "^13.4.3",
+    "next-themes": "^0.2.1",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.0.4"
   }
 }

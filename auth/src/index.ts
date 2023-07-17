@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { app } from "./app";
 
 const start = async () => {
+  const PORT = process.env.PORT || 3000
   console.log("Starting up ...");
   
   if (!process.env.JWT_KEY) {
@@ -19,7 +20,7 @@ const start = async () => {
     console.error(err);
   }
 
-  app.listen(3000, () => {
+  app.listen(PORT, () => {
     console.log("Listening on port 3000!!!!!!!!");
   });
 };

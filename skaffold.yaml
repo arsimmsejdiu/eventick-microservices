@@ -1,13 +1,13 @@
-apiVersion: skaffold/v2alpha3
+apiVersion: skaffold/v4beta2
 kind: Config
 manifests:
   rawYaml:
-    - ./infra/k8s/*
+    - ./infrastructure/k8s/*
 build:
   local:
     push: false
   artifacts:
-    - image: cygnetops/auth
+    - image: arsimsejdiu/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -15,15 +15,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: cygnetops/ticketing-client
-      context: client
-      docker:
-        dockerfile: Dockerfile
-      sync:
-        manual:
-          - src: "**/*.js"
-            dest: .
-    - image: cygnetops/tickets
+    - image: arsimsejdiu/tickets
       context: tickets
       docker:
         dockerfile: Dockerfile
@@ -31,7 +23,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: cygnetops/orders
+    - image: arsimsejdiu/orders
       context: orders
       docker:
         dockerfile: Dockerfile
@@ -39,7 +31,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: cygnetops/expiration
+    - image: arsimsejdiu/expiration
       context: expiration
       docker:
         dockerfile: Dockerfile
@@ -47,7 +39,7 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: cygnetops/payments
+    - image: arsimsejdiu/payments
       context: payments
       docker:
         dockerfile: Dockerfile

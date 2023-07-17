@@ -1,4 +1,4 @@
-import { Subjects, Publisher, OrderCancelledEvent } from "@cygnetops/common-v2";
+import { Subjects, Publisher, OrderCancelledEvent } from "@eventick/common";
 
 export class OrderCancelledPublisher extends Publisher<OrderCancelledEvent> {
   subject: Subjects.OrderCancelled = Subjects.OrderCancelled;
